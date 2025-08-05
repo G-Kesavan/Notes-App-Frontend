@@ -47,6 +47,7 @@ const loginPage = () => {
   }
   return (
     <>
+
       <div className='flex justify-center items-center h-[92vh] w-full'>
         <div className='flex border-[1px]  rounded-lg px-4 py-5'>
           <form className='flex flex-col gap-2' onSubmit={handleLogin}>
