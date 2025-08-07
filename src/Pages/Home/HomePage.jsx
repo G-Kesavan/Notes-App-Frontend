@@ -100,7 +100,7 @@ const onEditOpen = async(id) => {
   }, [])
   return (
     <>
-      <Navbar userInfo={userInfo}/>
+      <Navbar userInfo={userInfo} showItems={true}/>
       <div className='container mx-auto bg-blue-50'>
         <div className='grid grid-cols-3 gap-4 m-7'>
           {allNotes.map((note)=>(

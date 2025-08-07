@@ -9,21 +9,21 @@ const Input = ({value,onChange,placeholder}) => {
     setShowPassword(!showPassword)
   }
   return (
-    <div className='h-full w-full flex items-center justify-center border-[1px] p-2 rounded-sm'>
+    <div className='h-full w-full flex items-center justify-center border-[1px] p-2 rounded-sm border-blue-900'>
       <input 
         value={value}
         onChange={onChange}
         type={showPassword?"text":"password"} 
-        placeholder={placeholder||"Password"}
-        className='h-full w-full outline-none'
+        placeholder="Password"
+        className='h-full w-full outline-none text-blue-900'
       />
 
       {showPassword?<FaRegEye
-        className=' flex items-center justify-center mx-1'
+        className=' flex items-center justify-center mx-1 text-blue-950'
         size={22}
         onClick={()=>taggleShowPassword()}
       />:<FaRegEyeSlash
-        className=' flex items-center justify-center mx-1'
+        className=' flex items-center justify-center mx-1 text-blue-950'
         size={22}
         onClick={()=>taggleShowPassword()}
       />}

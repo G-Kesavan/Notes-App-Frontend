@@ -56,47 +56,48 @@ const SignUp = () => {
   return (
     <>
       <Navbar/>
-      <div className='flex justify-center items-center h-[92vh] w-full'>
-        <div className='flex border-[1px]  rounded-lg px-4 py-5'>
-          <form className='flex flex-col gap-2' onSubmit={handleSignUp}>
+      <div className="relative z-0 flex justify-center bg-blue-50 items-center h-[92vh] w-full ">
+        <div className='p-1 overflow-hidden rounded-2xl '>
+          <div className="relative flex items-center bg-blue-100 rounded-2xl px-6 py-8 border-[1px] border-blue-200/5 shadow-2xl before:content-[''] before:flex before:absolute before:animate-spin before:left-[-10%] before:w-[calc(120%+15px)] before:h-[calc(40%+15px)] before:rounded-2xl before:bg-gradient-to-t before:from-transparent before:via-blue-800 before:to-transparent before:z-[-1]">  <form className='flex flex-col gap-2' onSubmit={handleSignUp}>
             <h4 
-              className='flex w-full items-center justify-center'
-            >Login</h4>
+              className='flex w-full items-center justify-center font-bold text-blue-900 text-xl'
+            >Sign Up</h4>
             <input 
               value={name}
               onChange={(e)=>setName(e.target.value)}
               type="text" 
               placeholder='Name'
-              className="input—box border-[1px] p-2 rounded-sm"
+              className="iinput—box text-blue-900 border-[1px] p-2 rounded-sm border-blue-900 outline-none"
             />
             <input 
               value={email}
               onChange={(e)=>setEmail(e.target.value)}
               type="email" 
               placeholder='Email'
-              className="input—box border-[1px] p-2 rounded-sm"
+              className="input—box text-blue-900 border-[1px] p-2 rounded-sm border-blue-900 outline-none"
             />
             <Password
               value={password}
               onChange={(e)=>setPassword(e.target.value)}
             />
 
-            {error&&<p>{error}</p>}
+            {error&&<p className='text-red-700'>{error}</p>}
 
             <button 
               type="submit" 
-              className="btn—primary border-[1px] rounded-sm p-1"
+              className="btn—primary border-[1px] rounded-sm p-1 bg-blue-300 border-blue-900"
             >
               Sign Up
             </button>
-            <p className='text-center' >
+            <p className='text-center text-blue-950' >
               Already have an account?{" "}
-              <Link to= '/login' >Login</Link>
+              <Link to= '/login' className='text-blue-700' >Login</Link>
             </p>
           </form>
         </div>
+        </div>
       </div>
-    </>
+  </>
   )
 }
 

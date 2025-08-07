@@ -3,7 +3,7 @@ import Profile from '../Profile/Profile'
 import Search from '../Search/Search'
 import { useNavigate } from 'react-router-dom'
 
-const Navbar = ({userInfo}) => {
+const Navbar = ({userInfo,showItems}) => {
 
   const [searchQuery, setSearchQuery] = useState("")
 
@@ -16,13 +16,16 @@ const Navbar = ({userInfo}) => {
   return (
     <nav className='h-[8vh] items-center justify-between bg-blue-300 text-blue-950 px-2 font-bold flex'>
         <h2 className='flex px-2'>Notes</h2>
-        <Search
+       {showItems && <Search
           value={searchQuery}
           onChange={(e)=>{
-            setSearchQuery(e.target.value)
+          setSearchQuery(e.target.value)
           }} 
-        />
-        <Profile LogOut={LogOut} userInfo={userInfo}/>
+        />}
+        {showItems && <Profile 
+          LogOut={LogOut} 
+          userInfo={userInfo}
+          />}
     </nav>
   )
 }
