@@ -102,7 +102,7 @@ const onEditOpen = async(id) => {
     <>
       <Navbar userInfo={userInfo} showItems={true}/>
       <div className='container mx-auto bg-blue-50'>
-        <div className='grid grid-cols-3 gap-4 m-7'>
+        <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 m-7'>
           {allNotes.map((note)=>(
             <NotesCard
               key={note._id}
@@ -121,10 +121,10 @@ const onEditOpen = async(id) => {
         </div>
       </div>
       <button 
-        className='bg-blue-500 text-white flex items-center justify-center rounded-lg absolute bottom-8 right-8 hover:bg-blue-700'
+        className='bg-blue-500 text-white flex items-center justify-center rounded-lg bottom-8 right-8 hover:bg-blue-700 fixed'
         onClick={()=>{setOpenAddEditModal({isShow:true,type:'add',data:null})}}
        >
-        <MdAdd className='text-5xl'/>
+        <MdAdd className='text-5xl cursor-crosshair'/>
       </button>
 
       <Modal

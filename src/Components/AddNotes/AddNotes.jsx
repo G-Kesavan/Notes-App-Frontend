@@ -98,7 +98,7 @@ const AddNotes = ({noteData,type,closeOn,getAllNotes}) => {
         <button 
             className='bg-blue-500 p-1 rounded-sm'
             onClick={handleAddNote}
-        >{type=='edit'?'update':'add'}</button>
+        >{type=='edit'?'UPDATE':'ADD'}</button>
     </div>
   )
 }

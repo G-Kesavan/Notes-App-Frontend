@@ -14,7 +14,7 @@ const Navbar = ({userInfo,showItems}) => {
   }
 
   return (
-    <nav className='h-[8vh] items-center justify-between bg-blue-300 text-blue-950 px-2 font-bold flex'>
+    <nav className='h-[10vh] w-full items-center justify-between bg-blue-300 text-blue-950 px-2 font-bold flex'>
         <h2 className='flex px-2'>Notes</h2>
        {showItems && <Search
           value={searchQuery}

@@ -21,7 +21,7 @@ const NotesCard = ({
                 <span>{date}</span>
             </div>
             <MdOutlinePushPin 
-                className={`icon-btn ${isPinned ? 'text-blue-950':'text-blue-300'}`}
+                className={`icon-btn cursor-pointer ${isPinned ? 'text-blue-950':'text-blue-300'}`}
                 onClick={()=>onPinNote((id))}
             />
         </div>
