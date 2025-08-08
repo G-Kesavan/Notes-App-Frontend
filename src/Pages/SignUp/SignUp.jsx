@@ -56,7 +56,7 @@ const SignUp = () => {
   return (
     <>
       <Navbar/>
-      <div className="relative flex justify-center bg-blue-50 items-center h-[92vh] w-full ">
+      <div className="relative flex justify-center bg-blue-50 items-center h-[90vh] w-full z-0">
         <div className='p-1 overflow-hidden rounded-2xl '>
           <div className="relative flex items-center bg-blue-100 rounded-2xl px-6 py-8 border-[1px] border-blue-200/5 shadow-2xl before:content-[''] before:flex before:absolute before:animate-spin before:left-[-10%] before:w-[calc(120%+15px)] before:h-[calc(40%+15px)] before:rounded-2xl before:bg-gradient-to-t before:from-transparent before:via-blue-800 before:to-transparent before:z-[-1]">  
           <form className='flex flex-col gap-2' onSubmit={handleSignUp}>

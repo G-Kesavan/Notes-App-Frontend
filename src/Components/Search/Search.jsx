@@ -7,7 +7,7 @@ const Search = ({value,onChange}) => {
       <input 
         value={value}
         type="search" 
-        className=' h-[5vh] md:w-full w-21
+        className=' h-[5vh] md:w-full w-20.5
          px-2 outline-none'
         placeholder='Search Item'
         onChange={onChange}
