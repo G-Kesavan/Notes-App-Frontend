@@ -59,7 +59,7 @@ const AddNotes = ({noteData,type,closeOn,getAllNotes}) => {
         }
     }
   return (
-    <div className='relative flex flex-col bg-blue-200 w-[65%] h-fit p-5 m-auto rounded-lg gap-1.5'>
+    <div className='relative flex flex-col bg-blue-200 w-[90%] md:w-[65%] h-fit p-5 m-auto rounded-lg gap-1.5'>
         <div className='absolute right-0 top-0 p-5'>
             <button
                 className=''

@@ -86,12 +86,12 @@ const SignUp = () => {
 
             <button 
               type="submit" 
-              className="btn—primary border-[1px] rounded-sm p-1 bg-blue-300 border-blue-900"
+              className="cursor-pointer hover:shadow-md shadow-blue-700 btn—primary border-[1px] rounded-sm p-1 bg-blue-300 border-blue-900"
             >
               Sign Up
             </button>
             <p className='text-center text-blue-950' >
-              Already have an account?{" "}
+              Already have an account?&nbsp;
               <Link to= '/login' className='text-blue-700' >Login</Link>
             </p>
           </form>

@@ -69,7 +69,7 @@ const loginPage = () => {
                 {error&&<p className='text-red-700'>{error}</p>}
                 <button 
                   type="submit" 
-                  className="btn—primary border-[1px] rounded-sm p-1 bg-blue-300 border-blue-900"
+                  className="btn—primary cursor-pointer hover:shadow-md shadow-blue-700 border-[1px] rounded-sm p-1 bg-blue-300 border-blue-900"
                 >Login</button>
                 <p 
                   className=' text-center text-blue-950' 

@@ -90,6 +90,21 @@ const onEditOpen = async(id) => {
     }
    });  
 }
+const searchItem =(text)=>{
+    const searchText = text.toUpperCase()
+    const item = document.querySelectorAll('.notes')
+    for(let index = 0; index<item.length; index++){
+        const itemText = item[index].querySelector('.tital').textContent.toUpperCase();
+        const itemDate = item[index].querySelector('.noteDate').textContent.toUpperCase();
+
+        if(itemText.indexOf(searchText) > -1 || itemDate.indexOf(searchText) > -1){
+            item[index].style.display = 'block'
+        }else{
+            item[index].style.display = 'none'  
+        }
+    };
+
+}
 
   useEffect(() => {
     getUserInfo()
@@ -100,7 +115,7 @@ const onEditOpen = async(id) => {
   }, [])
   return (
     <>
-      <Navbar userInfo={userInfo} showItems={true}/>
+      <Navbar userInfo={userInfo} showItems={true} searchItem={searchItem}/>
       <div className='container mx-auto bg-blue-50'>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 m-7'>
           {allNotes.map((note)=>(
