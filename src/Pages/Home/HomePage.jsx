@@ -116,7 +116,7 @@ const searchItem =(text)=>{
   return (
     <>
       <Navbar userInfo={userInfo} showItems={true} searchItem={searchItem}/>
-      <div className='container mx-auto bg-blue-50'>
+      <div className='container mx-auto bg-blue-50 h-auto pb-14'>
         <div className='grid lg:grid-cols-3 md:grid-cols-2 gap-4 m-7'>
           {allNotes.map((note)=>(
             <NotesCard
